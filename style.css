@@ -1,0 +1,32 @@
+.calculatorContainer {
+    width: 400px;
+    height: 500px;
+    border: 2px solid black;
+    background-color: rgb(211, 203, 203);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.display {
+    background-color: rgb(105, 105, 206);
+    color: white;
+    border: 2px solid black;
+    margin: auto;
+}
+
+.buttonContainer {
+    background-color: rgb(106, 167, 106);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+    gap: 10px;
+    padding: 10px;
+}
+
+button {
+    width: 80px;
+    height: 80px;
+}
