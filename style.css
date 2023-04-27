@@ -9,7 +9,7 @@ body {
     width: 400px;
     height: 500px;
     border: 2px solid black;
-    background-color: rgb(211, 203, 203);
+    background-color: rgb(132, 165, 187);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -19,11 +19,13 @@ body {
 }
 
 .display {
-    background-color: rgb(105, 105, 206);
-    color: white;
+    background-color: rgb(228, 223, 223);
     border: 2px solid black;
     margin: auto;
     border-radius: 5px;
+    width: 350px;
+    height: 100px;
+    font-size: 30px;
 }
 
 .buttonContainer {
@@ -49,4 +51,42 @@ button:hover {
     
 button:active {
     background-color: hsl(68, 4%, 43%);
+}
+
+.clear {
+    background-color: rgb(240, 63, 63);
+    color: white;
+}
+
+.clear:hover {
+    background-color: rgb(214, 57, 57);
+}
+
+.clear:active {
+    background-color: rgb(179, 48, 48);
+}
+
+button.operator {
+    background-color: rgb(214, 211, 211);
+    font-size: 25px;
+}
+
+.operator:hover {
+    background-color: rgb(180, 177, 177);
+}
+
+.operator:active {
+    background-color: rgb(148, 146, 146);
+}
+
+.equals {
+    background-color: rgb(121, 231, 121);
+}
+
+.equals:hover {
+    background-color: rgb(107, 206, 107);
+}
+
+.equals:active {
+    background-color: rgb(99, 192, 99);
 }
