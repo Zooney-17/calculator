@@ -37,7 +37,8 @@ const buttons = document.querySelectorAll('.number');
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        display.textContent = button.textContent;
+        if (display.textContent === '0') display.textContent = '';
+        display.textContent += button.textContent;
         displayValue = display.textContent;
     });
 });
