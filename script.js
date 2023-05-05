@@ -57,9 +57,11 @@ computations.forEach((computation) => {
 });
 
 equals.addEventListener('click', () => {
-    secondNumber = display.textContent;
-    firstNumber = temp;
-    display.textContent = `${operate(operator, Number(firstNumber), Number(secondNumber))}`;
+    if (temp) {
+        secondNumber = display.textContent;
+        firstNumber = temp;
+        display.textContent = `${operate(operator, Number(firstNumber), Number(secondNumber))}`;
+    };
 });
 
 clear.addEventListener('click', () => {
@@ -69,4 +71,4 @@ clear.addEventListener('click', () => {
     operator = undefined;
     displayValue = undefined;
     temp = undefined;
-})
+});
