@@ -9,8 +9,8 @@ function divide(a, b) {
         return 'yeah right, lmao';
     } else {
         return a/b;
-    }
-}
+    };
+};
 
 let firstNumber;
 let secondNumber;
@@ -66,10 +66,13 @@ computations.forEach((computation) => {
 });
 
 equals.addEventListener('click', () => {
-    if (temp) {
+    if (operator === undefined) {
+        display.textContent = display.textContent;
+    } else if (temp) {
         firstNumber = temp;
         secondNumber = display.textContent;
         display.textContent = `${operate(operator, Number(firstNumber), Number(secondNumber))}`;
+        operator = undefined;
     };
 });
 
