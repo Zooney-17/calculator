@@ -15,7 +15,6 @@ function divide(a, b) {
 let firstNumber;
 let secondNumber;
 let operator;
-let displayValue;
 let temp;
 
 function operate(operation, firstNumber, secondNumber) {
@@ -37,7 +36,6 @@ buttons.forEach((button) => {
     button.addEventListener('click', () => {
         if (display.textContent === '0') display.textContent = '';
         if (firstNumber) {
-            temp = firstNumber;
             firstNumber = undefined;
             display.textContent = '';
         }
@@ -51,15 +49,24 @@ const computations = document.querySelectorAll('.operator');
 
 computations.forEach((computation) => {
     computation.addEventListener('click', () => {
-        firstNumber = display.textContent;
-        operator = computation.textContent;
+        if (temp && operator) {
+            firstNumber = temp;
+            secondNumber = display.textContent;
+            display.textContent = `${operate(operator, Number(firstNumber), Number(secondNumber))}`;
+            operator = computation.textContent;
+            temp = display.textContent;
+        } else {
+            firstNumber = display.textContent;
+            operator = computation.textContent;
+            temp = firstNumber;
+        };
     });
 });
 
 equals.addEventListener('click', () => {
     if (temp) {
-        secondNumber = display.textContent;
         firstNumber = temp;
+        secondNumber = display.textContent;
         display.textContent = `${operate(operator, Number(firstNumber), Number(secondNumber))}`;
     };
 });
@@ -69,6 +76,5 @@ clear.addEventListener('click', () => {
     firstNumber = undefined;
     secondNumber = undefined;
     operator = undefined;
-    displayValue = undefined;
     temp = undefined;
 });
