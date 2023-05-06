@@ -38,8 +38,10 @@ buttons.forEach((button) => {
         if (firstNumber) {
             firstNumber = undefined;
             display.textContent = '';
-        }
-        display.textContent += button.textContent;
+        };
+        if (display.textContent.length < 9) {
+            display.textContent += button.textContent;
+        };
     });
 });
 
